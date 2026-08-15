@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Button
+                x:Name="ButtonSalvar"
+                Text="Salvar" 
+                SemanticProperties.Hint="Salva o que foi escrito no Entry."
+                Clicked="AoClicarlNoSalvar"
+                HorizontalOptions="Fill" />    
+
+            <Button
+                x:Name="ButtonApagar"
+                Text="Apagar" 
+                SemanticProperties.Hint="Apaga o conteúdo do Entry."
+                Clicked="AoClicarlNoApagar"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="ButtonCarregar"
+                Text="Carregar" 
+                SemanticProperties.Hint="Carrega o arquivo que salvou o que foi escrito anteriormente no Editor."
+                Clicked="AoClicarlNoCarregar"
+                HorizontalOptions="Fill" />
+
+            <Editor
+               x:Name="EditorAnotacao"
+               Placeholder="Escreva aqui."/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
